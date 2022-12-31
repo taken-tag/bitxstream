@@ -95,8 +95,8 @@ const SidebarData = [
     Icon: <Account />,
     Child: [
       { name: "Equity", balance: "100000" },
-      { name: "Today Profit", balance: "300" },
-      { name: "Net Profit", balance: "100000" },
+      { name: "Today Profit", balance: "0" },
+      { name: "Net Profit", balance: "0" },
     ],
     link: '',
   },

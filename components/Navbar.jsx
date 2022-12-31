@@ -28,7 +28,7 @@ export default function Navbar({showMenu, setShowMenu}) {
             <div className="mx-2 bg-[#3b3e3c] rounded-md w-[34px] h-[34px] flex items-center justify-center">
               <Wallet />
             </div>
-            <span className="p-0 m-0 text-sm">$1231.00</span>
+            <span className="p-0 m-0 text-sm">$100000</span>
           </div>
 
           <div className="profileDetails flex items-center justify-center w-fit relative">
