@@ -4,7 +4,7 @@ export default function CalenderData() {
   return (
     <div className="px-[1px] pt-2 bg-[#000]  h-[calc(400px-60px)] overflow-x-scroll overflow-y-scroll  pr-3 " id="mydiv">
       {/* static */}
-      <div className="flex items-center space-between text-[#bdbdbd] h-[auto] md:h-[50px] w-[100%]  pr-3 mb-4 mt-2">
+      <div className="flex items-center space-between text-[#bdbdbd] h-[auto] md:h-[20px] w-[100%]  pr-3 mb-4 mt-2">
         <div className="left w-[62%] flex items-center ">
           <p className="w-[20%] md:w-[35%] mx-3 uppercase md:text-base text-[10px]">Time</p>
           <p className="w-[30%]  md:w-[20%] mx-3 uppercase md:text-base text-[10px]">Currency</p>
