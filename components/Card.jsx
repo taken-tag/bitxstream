@@ -5,7 +5,7 @@ function Card() {
   return (
     <>
       {data.map((item) => (
-        <div className="text-white bg-[#1b1d1c] w-[100%] py-3 px-2 rounded-xl my-5  ">
+        <div className="text-white bg-[#1b1d1c] w-[100%] py-3 px-2 rounded-xl my-5" key={item.name}>
           <div className="">
             <div className="icon">
               <img

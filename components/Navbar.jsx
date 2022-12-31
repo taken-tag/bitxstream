@@ -1,23 +1,20 @@
 import React, { useState } from "react";
 import Hamburger from "../Icons/Hamburger";
 import Wallet from "../Icons/Wallet";
-import LeftSidebar from "./LeftSidebar";
-import RightSide from "./RightSide";
+
 import Avatar from "../Icons/Avatar";
 import Download from "../Icons/Download";
 import Password from "../Icons/Password";
 import Logout from "../Icons/Logout";
-export default function Navbar() {
-  const [showMenu, setShowMenu] = useState(true);
+import Logo from "./Logo";
+export default function Navbar({showMenu, setShowMenu}) {
+  
+  const desktoplogo = 'w-[150px] hidden  md:block  h-[75px] object-contain'
   return (
     <>
       <div className="NavbarDashboard bg-[#1b1d1c] flex items-center justify-between p-3 h-[70px] top-[0px]  fixed w-[100%] z-40">
-        <div className="logoBox w-[220px]    flex items-center justify-between">
-          <img
-            src="https://client.bitxtream.com/assets/images/brand-logo1.png"
-            alt="logo"
-            className="w-[150px] h-[75px] object-contain"
-          />
+        <div className="logoBox md:w-[220px]    flex items-center justify-between">
+          <Logo style={desktoplogo}/>
           <div
             className="hamburgerMenu text-white cursor-pointer"
             onClick={() => setShowMenu(!showMenu)}
@@ -70,11 +67,7 @@ export default function Navbar() {
       </div>
 
       {/* // LeftSide */}
-      <div className="w-[100%] h-[calc(100vh-70px)]    flex mt-[70px]">
-        <LeftSidebar showMenu={showMenu} />
-
-        <RightSide showMenu={showMenu}/>
-      </div>
+      
     </>
   );
 }

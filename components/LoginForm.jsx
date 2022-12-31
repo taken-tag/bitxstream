@@ -8,6 +8,7 @@ export default function LoginForm() {
   function formSub(e){
        e.preventDefault()
        if(email === 'razdankaran11@gmail.com' && password === 'Karan@123k'){
+        localStorage.setItem("token", password)
         router.push('/dashboard')
        }else{
           setError(true)
@@ -54,7 +55,7 @@ export default function LoginForm() {
              <p className="text-red-500 text-[12px] font-semibold">Please enter a valid email address</p> }
             
             <br />
-            <label className="text-[#9f9f9f]" for="lname">
+            <label className="text-[#9f9f9f]" htmlfor="lname">
               Password
             </label>
             <br />

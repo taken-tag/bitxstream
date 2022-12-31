@@ -12,7 +12,7 @@ export default function Arrow({show, id}) {
       height='18px'
       stroke="#fff"
       fill="#fff"
-      style= {{transform: show == id && 'rotate(90deg)'}}
+      style= {{transform : show == id && 'rotate(90deg)'}}
     >
       <path d="M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"></path>
     </svg>

@@ -8,9 +8,11 @@ import Square from "../Icons/Square";
 import Account from "../Icons/Account";
 import Document from "../Icons/Document";
 import Arrow from "../Icons/Arrow";
+import Logo from "./Logo";
 export default function LeftSidebar({showMenu}) {
     const [show, setShow] = useState('')
     const [active, setActive] = useState('Dashboard')
+    const mobile = `w-[120px]  block  md:hidden  h-[60px] object-contain`
     function ToggleChild(id){
         setActive(id)
         if(!showMenu){
@@ -22,12 +24,13 @@ export default function LeftSidebar({showMenu}) {
         setShow(id)
     }
   return (
-    <div className={`leftSide   px-3 bg-[#202020] h-[100%] ${showMenu && 'w-[230px]'} ${!showMenu && 'w-fit px-2'} fixed`}>
+    <div className={`leftSide   px-3 bg-[#202020] h-[100%] ${!showMenu && 'hidden'} ${showMenu && 'block w-[230px]'} md:block ${showMenu && 'md:w-[230px]'} ${!showMenu && 'md:w-fit px-2'} fixed`}>
+     <Logo style={mobile}/> 
      <p className="my-3 mb-0 font-semibold text-base uppercase text-white ">Client {showMenu && 'Area'}</p> 
 
         {SidebarData.map((item)=>{
             return(
-                <>
+                <div key={item.name}>
         <div className={`sideBarMenu flex items-center py-2 cursor-pointer text-white   my-2 px-3 rounded-full ${showMenu ? 'w-[100%]' : 'w-fit'} ${active == item.name && 'text-[#1de9b6] bg-[#2c2c2c]'}`} 
         onClick={()=>ToggleChild(item.name)}>
          {item.Icon}
@@ -43,11 +46,11 @@ export default function LeftSidebar({showMenu}) {
         {showMenu && 
         <>
         {(item.Child.length && show === item.name) &&  item.Child.map((item)=>(
-        <p className="mx-2 font-medium text-lg bg-gray-300  my-2 px-3 rounded-full py-2 ml-5">{item.name}</p>
+        <p className="mx-2 font-medium text-lg  my-1 px-3 rounded-full py-2 ml-5 text-[#1de9b6] cursor-pointer hover:bg-[#2c2c2c]" key={item.name}>{item.name}</p>
         )) }
         </>
             }
-        </>
+        </div>
             )
          })}
       
@@ -69,13 +72,13 @@ const SidebarData = [
     {
       name: 'Account',
       Icon: <Account/>,
-      Child: false,
+      Child: [{name: 'Equity'},{name: 'Today Profit'},{name: 'Net Profit'}, ],
     },
   
     {
       name: 'Finance',
       Icon: <Dollar/>,
-      Child: [{name: 'Child 1'},{name: 'Child 2'} ],
+      Child: [{name: 'Deposit funds'},{name: 'Withdraw funds'}, {name: 'Transfer funds'}, {name: 'Ledger overview'} ],
     },
   
     

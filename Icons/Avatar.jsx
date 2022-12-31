@@ -5,7 +5,7 @@ export default function Avatar() {
     <svg
       className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc "
       focusable="false"
-      ariaHidden="true"
+      aria-hidden="true"
       viewBox="0 0 24 24"
       dataTestid="PermIdentityOutlinedIcon"
       width='26px'

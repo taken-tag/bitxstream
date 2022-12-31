@@ -3,11 +3,11 @@ import React from "react";
 export default function Dashboard() {
   return (
     <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc dashboard"
+      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc dashboard"
       focusable="false"
-      ariaHidden="true"
+      aria-hidden="true"
       viewBox="0 0 24 24"
-      dataTestid="AirplayOutlinedIcon"
+      datatestid="AirplayOutlinedIcon"
       width='26px'
       height='26px'
       stroke="#fff"

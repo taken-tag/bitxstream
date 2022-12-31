@@ -5,9 +5,10 @@ import Dollar from "../Icons/Dollar"
 
 function UpperCard() {
   return (
-    <div className="flex items-center justify-between ">
-        {data.map((item)=>(
-          <div className="text-white bg-[#1b1d1c] cursor-pointer   w-[180px] px-4 py-3  rounded-2xl h-[80px]">
+    <div className="flex flex-col w-[100%]  md:flex-row  md:items-center md:justify-between ">
+        {data.map((item, ind)=>(
+          <div className="text-white bg-[#1b1d1c] my-2 cursor-pointer w-[100%]   md:w-[180px] px-4 py-3  rounded-2xl h-[80px]" 
+          key={item.name + ind + ' '}>
         <div className="flex items-center">
           <div className="icon  mr-[4px]">
             {item.icon}

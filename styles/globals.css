@@ -46,9 +46,6 @@ background: black
 
 }
 
-
-
-
 .bg {
     width: 100%;
     background-image: url("https://client.bitxtream.com/new-bg-image.b20a12a69c90672c8722.png");
@@ -59,11 +56,35 @@ background: black
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+
+.loader{
+    animation: loaderanimation 3s infinite;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+}
+
+.loaderfirst{
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+    animation: loaderanimation 3s infinite;
+    animation-direction: reverse;
+}
+
+
+@keyframes loaderanimation {
+    0%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(360deg);
+    }
+
+
+
   }
 
 
 
 
-.password:active {
-    box-shadow: 2px 2px 5px #fc894d;
-  }
+
