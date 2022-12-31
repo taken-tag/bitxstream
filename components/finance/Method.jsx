@@ -8,7 +8,7 @@ export default function Method({value}) {
   return (
     <div>
         <Navbar showMenu={showMenu} setShowMenu={setShowMenu}/>
-        <div className="w-[100%] h-[calc(100vh-70px)]    flex mt-[70px]">
+        <div className="w-[100%] h-[100%]  pb-10   flex mt-[70px]">
         <LeftSidebar showMenu={showMenu} />
 
         <FinanceRight value={value}/>

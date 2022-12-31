@@ -11,15 +11,16 @@ export default function Withdrawcard() {
       <div className=' my-5 w-[100%] bg-[#202020] p-5 rounded-2xl'>
            <div>
             <p className='text-[#bdbdbd] my-1'>Amount($)</p>
-             <input type="text" placeholder='Enter amount in USD' className="bg-black rounded-md w-[100%]  p-2"/>
+             <input type="text" placeholder='Enter amount in USD' 
+             className="bg-black text-white rounded-md w-[100%]  p-2"/>
            </div>
 
 
            <div >
             <p className='text-[#bdbdbd] my-1'>Select Type</p>
              <select className='bg-black rounded-md text-[#bdbdbd] p-2 w-[100%]'>
-                   {data.map((item)=>(
-                <option className='text-[#bdbdbd]'>Select Type</option>
+                   {optionData.map((item)=>(
+                <option className='text-[#bdbdbd]'>{item}</option>
                    ))}
              </select>
            </div>
@@ -47,4 +48,6 @@ export default function Withdrawcard() {
 
 
 
-const data = [10,20,30,40]
+const data = [5,10,15,20,25,30,50,100]
+
+const optionData = ['ETHEREUM', 'DEFAULT BANK', 'BANKWIRE2', 'USDT TRC20', 'USDT ERC20', 'Make Withdraw by Voucher', 'Cash']
