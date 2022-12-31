@@ -10,7 +10,14 @@ export default function dashboard() {
   const router = useRouter()
 
   useEffect(() =>{
-    setLoader(false)
+    let token = localStorage.getItem('token')
+    if(token == 'smay123'){
+      setLoader(false)
+    }else{
+      setTimeout(() =>{
+        router.push('/')
+      }, 1000)
+    }
   })
   
 
@@ -18,10 +25,12 @@ export default function dashboard() {
     <div>
      {loader && <Loader/>}
      {!loader && <Navbar showMenu={showMenu} setShowMenu={setShowMenu} />}
+     {!loader && 
      <div className="w-[100%] h-[calc(100vh-70px)]    flex mt-[70px]">
         <LeftSidebar showMenu={showMenu} />
         <RightSide showMenu={showMenu}/>
       </div>
+     }
     </div>
   )
 }

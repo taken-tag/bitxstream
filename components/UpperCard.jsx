@@ -49,7 +49,7 @@ const data = [
   {
     name: 'IB Accounts',
     icon: <Dollar/>,
-    extraDetails: [<Dollar/>, '1231.00']
+    extraDetails: [<Dollar/>, '100000']
   },
 
   {

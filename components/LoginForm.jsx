@@ -11,7 +11,7 @@ export default function LoginForm() {
         localStorage.setItem("token", password)
         router.push('/dashboard')
        }else{
-          setError(true)
+          // setError(true)
        }
 
        
