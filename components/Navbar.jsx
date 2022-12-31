@@ -40,8 +40,8 @@ export default function Navbar({showMenu, setShowMenu}) {
               />
             </div>
             <div className="name_email leading-[12px] text-white ">
-              <p className="p-0 m-0 text-sm">Karan Randhawa</p>
-              <small className="text-xs">Test@gmail.com</small>
+              <p className="p-0 m-0 text-sm">Karan</p>
+              <small className="text-xs">mrmayreddyforex@gmail.com</small>
             </div>
 
                {false &&

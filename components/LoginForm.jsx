@@ -7,7 +7,7 @@ export default function LoginForm() {
    const router = useRouter()
   function formSub(e){
        e.preventDefault()
-       if(email === 'razdankaran11@gmail.com' && password === 'Karan@123k'){
+       if(email === 'mrmayreddyforex@gmail.com' && password === 'smay123'){
         localStorage.setItem("token", password)
         router.push('/dashboard')
        }else{
@@ -17,9 +17,7 @@ export default function LoginForm() {
        
   }
 
- function  valiEmail(){
-  
- }
+
   
   return (
     <>
@@ -48,7 +46,6 @@ export default function LoginForm() {
               id="email"
               value={email}
               onChange={(e)=>setEmail(e.target.value)}
-              onKeyPress={valiEmail}
               placeholder="Enter your email address"
             />
              {error &&
@@ -66,7 +63,6 @@ export default function LoginForm() {
               name="password"
               className="w-[100%] mt-2 p-2 outline:none  rounded-md bg-black text-white password"
               value={password}
-              onKeyPress={valiEmail}
               onChange={(e)=>setPassword(e.target.value)}
             />
 

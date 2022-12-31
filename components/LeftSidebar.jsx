@@ -53,7 +53,7 @@ export default function LeftSidebar({ showMenu, value }) {
                   {item.Child.length && <Arrow show={show} id={item.name} />}
                 </div>
               )}
-            </div>
+            </div>  
             
 
             {showMenu && (
@@ -94,9 +94,9 @@ const SidebarData = [
     name: "Account",
     Icon: <Account />,
     Child: [
-      { name: "Equity", balance: "1231.00" },
+      { name: "Equity", balance: "100000" },
       { name: "Today Profit", balance: "300" },
-      { name: "Net Profit", balance: "1231.00" },
+      { name: "Net Profit", balance: "100000" },
     ],
     link: '',
   },
