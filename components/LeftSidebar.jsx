@@ -40,7 +40,6 @@ export default function LeftSidebar({ showMenu, value }) {
       {SidebarData.map((item) => {
         return (
           <div key={item.name}>
-          <a href={item.link && `/${item.link}`}>
             <div
               className={`sideBarMenu flex items-center py-2 cursor-pointer text-white   my-2 px-3 rounded-full ${
                 showMenu ? "w-[100%]" : "w-fit"
@@ -55,7 +54,7 @@ export default function LeftSidebar({ showMenu, value }) {
                 </div>
               )}
             </div>
-            </a>
+            
 
             {showMenu && (
               <>
@@ -111,7 +110,7 @@ const SidebarData = [
       { name: "Transfer funds", link: "transfer" },
       { name: "Ledger overview", link: "ledger" },
     ],
-    link: ''
+    link: false
   },
 
   {
