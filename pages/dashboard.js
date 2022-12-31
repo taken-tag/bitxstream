@@ -6,7 +6,7 @@ import LeftSidebar from "../components/LeftSidebar";
 import RightSide from "../components/RightSide";
 export default function dashboard() {
   const [loader, setLoader] = useState(true)
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(true);
   const router = useRouter()
 
   useEffect(() =>{

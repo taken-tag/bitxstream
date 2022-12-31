@@ -9,7 +9,7 @@ import Account from "../Icons/Account";
 import Document from "../Icons/Document";
 import Arrow from "../Icons/Arrow";
 import Logo from "./Logo";
-export default function LeftSidebar({showMenu}) {
+export default function LeftSidebar({showMenu, value}) {
     const [show, setShow] = useState('')
     const [active, setActive] = useState('Dashboard')
     const mobile = `w-[120px]  block  md:hidden  h-[60px] object-contain`
@@ -23,6 +23,8 @@ export default function LeftSidebar({showMenu}) {
         }
         setShow(id)
     }
+
+    
   return (
     <div className={`leftSide   px-3 bg-[#202020] h-[100%] ${!showMenu && 'hidden'} ${showMenu && 'block w-[230px]'} md:block ${showMenu && 'md:w-[230px]'} ${!showMenu && 'md:w-fit px-2'} fixed`}>
      <Logo style={mobile}/> 
@@ -46,8 +48,12 @@ export default function LeftSidebar({showMenu}) {
         {showMenu && 
         <>
         {(item.Child.length && show === item.name) &&  item.Child.map((item)=>(
-        <p className="mx-2 font-medium text-lg  my-1 px-3 rounded-full py-2 ml-5 text-[#1de9b6] cursor-pointer hover:bg-[#2c2c2c]" key={item.name}>{item.name}</p>
+          <a href={item.link && `${item.link}`}>
+        <p className="mx-2 font-medium text-lg  my-1 px-3 rounded-full py-2 ml-5 text-[#1de9b6] cursor-pointer hover:bg-[#2c2c2c]" key={item.name} >{item.name}</p>
+        </a>
         )) }
+
+
         </>
             }
         </div>
@@ -66,6 +72,7 @@ const SidebarData = [
       name: 'Dashboard',
       Icon: <Dashboard/>,
       Child: false,
+      link: false
     },
   
   
@@ -73,12 +80,13 @@ const SidebarData = [
       name: 'Account',
       Icon: <Account/>,
       Child: [{name: 'Equity'},{name: 'Today Profit'},{name: 'Net Profit'}, ],
+      link: false
     },
   
     {
       name: 'Finance',
       Icon: <Dollar/>,
-      Child: [{name: 'Deposit funds'},{name: 'Withdraw funds'}, {name: 'Transfer funds'}, {name: 'Ledger overview'} ],
+      Child: [{name: 'Deposit funds', link: 'deposit'},{name: 'Withdraw funds', link: 'withdraw'}, {name: 'Transfer funds', link: 'transfer'}, {name: 'Ledger overview', link: 'ledger'} ],
     },
   
     
