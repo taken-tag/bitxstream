@@ -5,6 +5,7 @@ function Card() {
   return (
     <>
       {data.map((item) => (
+        <a href={item.link}>
         <div className="text-white bg-[#1b1d1c] w-[100%] py-3 px-2 rounded-xl my-5" key={item.name}>
           <div className="">
             <div className="icon">
@@ -32,6 +33,7 @@ function Card() {
             </div>
           </div>
         </div>
+        </a>
       ))}
     </>
   );
@@ -43,20 +45,24 @@ const data = [
   {
     name: "Deposit Funt",
     icon: "right1.png",
+    link: 'deposit'
   },
 
   {
     name: "Withdraw Funds",
     icon: "right2.png",
+    link: 'withdraw'
   },
 
   {
     name: "Transfer Funds",
     icon: "right3.png",
+    link: 'transfer'
   },
 
   {
     name: "Ledger Overview",
     icon: "right4.png",
+    link: 'ledger'
   },
 ];
