@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CalenderData() {
   return (
-    <div className="px-[1px] pt-2 bg-[#000]  h-[calc(400px-60px)] overflow-x-scroll overflow-y-scroll  pr-3 " id="mydiv">
+    <div className="px-[1px] pt-2 bg-[#000]  h-[calc(400px-60px)] overflow-x-scroll md:overflow-x-hidden overflow-y-scroll  pr-3 " id="mydiv">
       {/* static */}
       <div className="flex items-center space-between text-[#bdbdbd] h-[auto] md:h-[20px] w-[100%]  pr-3 mb-4 mt-2">
         <div className="left w-[62%] flex items-center ">
