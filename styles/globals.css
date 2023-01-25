@@ -48,7 +48,7 @@ background: black
 
 .bg {
     width: 100%;
-    background-image: url("https://client.bitxtream.com/new-bg-image.b20a12a69c90672c8722.png");
+    background-image: url("/login.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
