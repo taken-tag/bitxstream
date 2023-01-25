@@ -12,9 +12,7 @@ export default function LoginForm() {
         router.push('/dashboard')
        }else{
           // setError(true)
-       }
-
-       
+       }       
   }
 
 
