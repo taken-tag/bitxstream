@@ -22,7 +22,7 @@ export default function LoginForm() {
       <div className="h-[400px] w-[260px] p-3 translate-x-[-60px]">
         <div>
           <img
-            src="https://client.bitxtream.com/assets/images/logo.png"
+            src="/logo.png"
             className="w-[180px]"
           />
         </div>
